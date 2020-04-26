@@ -23,6 +23,9 @@ fun main() {
 
     val employee3: Set<Employee>
 
+    val names = arrayListOf("John", "Jane", "Mary")
+    println(names[2])
+
 }
 
 class Employee(var name: String, val id: Int) {
