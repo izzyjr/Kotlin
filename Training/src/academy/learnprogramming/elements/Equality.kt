@@ -28,4 +28,9 @@ class Employee(var name: String, val id: Int) {
         return false
     }
 
+    override fun toString(): String {
+        return "Employee(name=$name, id=$id)"
+    }
+
+
 }
