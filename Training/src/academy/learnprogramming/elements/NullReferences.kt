@@ -4,7 +4,7 @@ fun main() {
 
     // Assigning a null value to a String variable in Kotlin
     // Results in: Null can not be a value of a non-null type String
-    // unless data type name is followed by a question mark
+    // unless data type name is followed by a question mark - made nullable
     val str: String? = "This ins't null"
     if (str != null) {
         str.toUpperCase()
@@ -26,6 +26,16 @@ fun main() {
     val something2 = something as? String
     println(something2)
 
+    val str6: String? = "This isn't null"
+    val str7 = str6!!.toUpperCase()
+
+    val str8: String? = null
+    val str9 = str8?.toUpperCase()
+    println(str9)
+
+    val str10: String? = "This isn't null - 2.0"
+    str10?.let { println(it) }
+
 
 }
 
@@ -36,3 +46,4 @@ fun elvisOperator(assignee: String?): String {
         return assignee
     }
 }
+
