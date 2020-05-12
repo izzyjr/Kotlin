@@ -25,6 +25,20 @@ fun main() {
         println(c)
     }
 
+    val utils = Utils()
+    val name = utils.upperCaseFirstLast("Marcelo")
+    println(name)
+
+    val name2 = "Maria"
+    println(name2.upperCaseFirstLast())
+
+
+}
+
+fun String.upperCaseFirstLast(): String {
+    val upperFirst = this.substring(0, 1).toUpperCase() + this.substring(1)
+    return upperFirst.substring(0, upperFirst.length - 1) +
+            upperFirst.substring(upperFirst.length - 1, upperFirst.length).toUpperCase()
 }
 
 fun printColors2(vararg  cars: Car2) {
