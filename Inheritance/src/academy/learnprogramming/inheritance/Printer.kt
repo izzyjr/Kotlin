@@ -9,8 +9,30 @@ fun main() {
 
 }
 
-open class Something {
+interface MyInterface {
 
+    val number: Int
+    val number2: Int
+        get() = 34
+
+    fun myFunction(str: String): String
+}
+
+interface MySubInterface: MyInterface {
+    fun mySubFunction(str: String): String
+}
+
+open class Something: MySubInterface {
+
+    override fun myFunction(str: String): String {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun mySubFunction(str: String): String {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override val number: Int = 24
     val someProperty: String
 
     constructor(someParameter: String) {
