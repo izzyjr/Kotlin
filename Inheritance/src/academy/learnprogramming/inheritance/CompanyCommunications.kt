@@ -18,6 +18,19 @@ fun main() {
         override fun mustImplement(num: Int) = "This is from mustImplement: ${num * 100}"
     })
 
+    println(Department.ACCOUNTING.getDepartmentInfo())
+
+}
+
+enum class Department(val fullName: String, val numEmployees: Int) {
+
+    HR("Human Resources", 5),
+    IT("Information Technology", 10),
+    ACCOUNTING("Accounting", 7),
+    SALES("Sales", 14);
+
+    fun getDepartmentInfo() = "The $fullName department has $numEmployees employees"
+
 }
 
 interface SomeInterface {
