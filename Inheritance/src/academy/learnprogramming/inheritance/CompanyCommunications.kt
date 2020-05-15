@@ -14,6 +14,18 @@ fun main() {
     println(someClass1.someOtherString)
     println(someClass2.someOtherString)
 
+    wantsSomeInterface(object: SomeInterface {
+        override fun mustImplement(num: Int) = "This is from mustImplement: ${num * 100}"
+    })
+
+}
+
+interface SomeInterface {
+    fun mustImplement(num: Int): String
+}
+
+fun wantsSomeInterface(si: SomeInterface) {
+    println("Printing from wantsSomeInterface ${si.mustImplement(22)}")
 }
 
 object CompanyCommunications {
