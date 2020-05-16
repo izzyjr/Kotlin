@@ -52,7 +52,7 @@ object CompanyCommunications {
     val currentYear = Year.now().value
 
     fun getTagLine() = "Our company rocks!"
-    fun getCopyrightline() = "Copyright ® $currentYear Our Company. All rights reserved."
+    internal fun getCopyrightline() = "Copyright ® $currentYear Our Company. All rights reserved."
 
 }
 
