@@ -19,8 +19,14 @@ fun main() {
     })
 
     println(Department.ACCOUNTING.getDepartmentInfo())
+    var x = 34
+    x =+ x.addNum(7)
+    println(x)
 
 }
+
+// Use this function from another package - Top Level Function
+fun topLevel(str: String) = println("Top level function $str")
 
 enum class Department(val fullName: String, val numEmployees: Int) {
 
@@ -71,6 +77,8 @@ class SomeClass private constructor(val someOtherString: String) {
     }
 
 }
+
+fun Int.addNum(num: Int):Int = this + num
 
 class SomeOtherClass {
 
