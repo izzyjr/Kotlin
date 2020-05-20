@@ -44,5 +44,28 @@ fun main() {
     val s = "goodbye"
     val sRange = 0..s.length
 
+    val seasons = arrayOf("Spring", "Summer", "Fall", "Winter")
+    for (season in seasons) {
+        println(season)
+    }
+
+    for (index in seasons.indices) {
+        println("${seasons[index]} is season number $index")
+    }
+
+    seasons.forEach { println(it) }
+    seasons.forEachIndexed {index, value -> println("$value is season number $index")}
+
+    val notASeason = "whatever" !in seasons
+    println(notASeason)
+
+    val notInRange = 32 !in 1..10
+    println(notInRange)
+
+    println("****************************")
+
+    val str1 = "Hello"
+    println('e' in str)
+    println('e' !in str)
 
 }
