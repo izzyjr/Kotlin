@@ -10,6 +10,8 @@ fun main() {
         Employee("Mike", "Jones", 2002)
     )
 
+    useParameter(employees, 349)
+
     println(employees.minBy { e: Employee -> e.startYear })
 
     println(employees.minBy( Employee::startYear ))
