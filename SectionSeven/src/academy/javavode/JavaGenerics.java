@@ -10,6 +10,11 @@ public class JavaGenerics {
 
          List<String> list = new ArrayList<>();
          list.add("Hello");
+          if (list instanceof List) {
+              System.out.println("This is a list");
+          }
+
+
         System.out.println(list.get(0).toUpperCase());
 
         List list1 = new ArrayList<>();

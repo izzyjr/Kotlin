@@ -1,6 +1,5 @@
 package academy.generics
 
-import academy.learnprogramming.collections.Car
 import java.math.BigDecimal
 
 fun main() {
@@ -11,8 +10,10 @@ fun main() {
     println(list)
     printCollections(list)
 
-    val bdList: MutableList<BigDecimal> = mutableListOf(BigDecimal(-33.45), BigDecimal(34.567),
-                BigDecimal(54.3456))
+    val bdList: MutableList<BigDecimal> = mutableListOf(
+        BigDecimal(-33.45), BigDecimal(34.567),
+        BigDecimal(54.3456)
+    )
 
     printCollections(bdList)
     list.extensionPrintCollections()
