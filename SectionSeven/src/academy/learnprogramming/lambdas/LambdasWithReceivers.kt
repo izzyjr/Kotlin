@@ -1,4 +1,4 @@
-package academy.learnprogrammming.lambdas
+package academy.learnprogramming.lambdas
 
 import kotlin.text.StringBuilder
 
@@ -6,7 +6,8 @@ fun main() {
 
 //    println(countTo100Four())
 
-    val employees = listOf(Employee("John", "Smith", 2012),
+    val employees = listOf(
+        Employee("John", "Smith", 2012),
         Employee("Jane", "Wilson", 2015),
         Employee("Mary", "Johnson", 2010),
         Employee("Mike", "Jones", 2002)
