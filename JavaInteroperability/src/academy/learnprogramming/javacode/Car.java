@@ -23,7 +23,7 @@ public class Car {
         this.color = color;
     }
 
-    public String getModel() {
+    public @Nullable String getModel() {
         return model;
     }
 

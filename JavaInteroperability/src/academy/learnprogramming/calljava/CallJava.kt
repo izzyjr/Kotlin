@@ -11,9 +11,15 @@ fun main() {
     car.color = "red"
     println(car)
 
-    var model = car.model
-    println(model.javaClass)
-    model = null
-    println()
+    var model: String? = car.model
+    println(model)
+
+
+    val car2 = Car("red", "ferrari", 1988)
+    var model2: String? = car.model
+    //println(model2.javaClass)
+    model2 = null
+    println(model2)
+
 
 }
