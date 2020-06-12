@@ -8,11 +8,40 @@ public class Car {
     private String color;
     private String model;
     private int year;
+    private Object javaObject;
+    public static int x = 5;
 
-    public Car(String color, String model, int year) {
+    public Car(String color, String model, int year, Object anobject) {
         this.color = color;
         this.model = model;
         this.year = year;
+        this.javaObject = anobject;
+    }
+
+    public void demoMethod(Runnable r) {
+
+        new Thread(r).start();
+
+//        new Thread( () -> System.out.println("I'm in a thread") ).start();
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("I'm in a thread");
+//            }
+//        }).start();
+    }
+
+    public static String xString() {
+        return "This is x: " + x++;
+    }
+
+    public Object getJavaObject() {
+        return javaObject;
+    }
+
+    public void setJavaObject(Object javaObject) {
+        this.javaObject = javaObject;
     }
 
     public @NotNull String getColor() {
@@ -37,6 +66,18 @@ public class Car {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public void variableMethod(int num, String... strings) {
+        for (String string: strings) {
+            System.out.println(string);
+        }
+    }
+
+    public void wantsIntArray(int[] theArray) {
+        for (int i: theArray) {
+            System.out.println("Here's the int: " + i);
+        }
     }
 
     @Override
