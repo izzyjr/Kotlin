@@ -8,4 +8,7 @@ fun main() {
     val modulo = x % y
     println(modulo)
 
+    val pal = "eye"
+    println(CheckPalindrome().checkPalindrome(pal))
+
 }
