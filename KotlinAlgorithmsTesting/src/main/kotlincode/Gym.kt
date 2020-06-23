@@ -11,4 +11,8 @@ fun main() {
     val pal = "eye"
     println(CheckPalindrome().checkPalindrome(pal))
 
+    val array: MutableList<Int> = mutableListOf(1, 2, 3,4, 5)
+
+    AdjacentElementsProduct().adjacentElementsProduct(array)
+
 }
