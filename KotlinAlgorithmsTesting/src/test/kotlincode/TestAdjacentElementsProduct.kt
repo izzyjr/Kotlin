@@ -28,4 +28,11 @@ class TestAdjacentElementsProduct {
         Assert.assertEquals(actualResult, 0)
     }
 
+    @Test
+    fun testAdjacentElementsProduct3() {
+        val input: MutableList<Int> = mutableListOf(-23, 4, -3, 8, -12)
+        val actualResult: Int = algorithm.adjacentElementsProduct(input)
+        Assert.assertEquals(actualResult, -12)
+    }
+
 }
