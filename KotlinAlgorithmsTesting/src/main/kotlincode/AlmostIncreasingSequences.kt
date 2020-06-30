@@ -4,19 +4,18 @@ class AlmostIncreasingSequences {
 
     fun almostIncreasingSequence(sequence: MutableList<Int>): Boolean {
         var count: Int = 0
-        val max: Int = 2
-        var standard: Int = Int.MIN_VALUE
+        var total: Int = 2
+        var max: Int? = sequence.max()
+        println(max)
+        var min: Int? = sequence.min()
+        println(min)
         for (i in 0 until sequence.size - 1) {
-            standard = sequence[i + 1]
-            println("${sequence[i]} - ${sequence[i + 1]}")
-            println("Standard: $standard")
             if (sequence[i] >= sequence[i + 1]) {
-                if (sequence[i + 1] <= standard) {
+                if (sequence[i + 1] <= min!!) {
                     count++
                 }
                 count++
-                println(count)
-                if (count == max) {
+                if (count == total) {
                     return false
                 }
             }
