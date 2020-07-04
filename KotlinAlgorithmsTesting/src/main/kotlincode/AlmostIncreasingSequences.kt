@@ -12,7 +12,8 @@ class AlmostIncreasingSequences {
                 count++
                 if (i > 0 && i != sequence.lastIndex - 1) {
                     var before: Int = sequence[i - 1]
-                    if (before >= next) {
+                    var afterNext: Int = sequence[i + 2]
+                    if (before >= next && current >= afterNext) {
                         count++
                     }
                 }

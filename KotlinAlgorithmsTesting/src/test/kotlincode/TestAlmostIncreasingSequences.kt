@@ -9,9 +9,9 @@ class TestAlmostIncreasingSequences {
 
     @Test
     fun testAlmostIncreasingSequences() {
-        val input: MutableList<Int> = mutableListOf(1, 4, 5, 2, 3)
+        val input: MutableList<Int> = mutableListOf(1, 2, 3, 4, 3, 6)
         val actualResult: Boolean = algorithm.almostIncreasingSequence(input)
-        Assert.assertEquals(actualResult, false)
+        Assert.assertEquals(actualResult, true)
     }
 
     @Test
