@@ -9,10 +9,7 @@ class AllLongestStrings {
                 maxLength = str.length
             }
         }
-
-        println(maxLength)
-
-        return inputArray
+        return inputArray.filter { it.length == maxLength } as MutableList<String>
     }
 
 }
