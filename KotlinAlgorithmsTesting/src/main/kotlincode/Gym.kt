@@ -15,4 +15,15 @@ fun main() {
 
     AdjacentElementsProduct().adjacentElementsProduct(array)
 
+    // comparing unsorted collections
+
+    val ar: Array<String> = arrayOf("true", "false", "Hello")
+    val ar2: Array<String> = arrayOf("Hello", "false", "true")
+    ar.sort()
+    ar2.sort()
+    println(ar.contentEquals(ar2))
+
+    val list: List<String> = listOf("true", "false", "Hello")
+    val list2: List<String> = listOf("Hello", "false", "true")
+    println(list.containsAll(list2))
 }
