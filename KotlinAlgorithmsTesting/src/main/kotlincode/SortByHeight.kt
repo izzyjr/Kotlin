@@ -7,12 +7,24 @@ class SortByHeight {
         for (i in 0 until a.lastIndex) {
             for (j in 0 until a.lastIndex) {
                 if (j + 1 < a.lastIndex) {
-                    if (a[j] > a[j + 1]) {
-                        println("a[j] = ${a[j]}")
-                        empty = a[j]
-                        a[j] = a[j + 1]
-                        a[j + 1] = empty
-                        println("a[j] = ${a[j]}")
+                    if (a[j] != -1) {
+                        if (a[j + 1] == -1 && a[j + 1] != a.lastIndex) {
+                            if (a[j] > a[j + 2]) {
+                                println("a[j] = ${a[j]}")
+                                empty = a[j]
+                                a[j] = a[j + 2]
+                                a[j + 2] = empty
+                                println("a[j] = ${a[j]}")
+                            }
+                        } else  {
+                            if (a[j] > a[j + 2]) {
+                                println("a[j] = ${a[j]}")
+                                empty = a[j]
+                                a[j] = a[j + 2]
+                                a[j + 2] = empty
+                                println("a[j] = ${a[j]}")
+                            }
+                        }
                     }
                 }
             }
