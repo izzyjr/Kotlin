@@ -7,7 +7,6 @@ class SortByHeight {
         val itr = a.iterator()
         val hashMap: HashMap<Int, Int> = hashMapOf()
 
-
         while (itr.hasNext()) {
             val t = itr.next()
             if (t == -1) {
@@ -17,7 +16,8 @@ class SortByHeight {
             count++
         }
 
-        hashMap.map { println(it) }
+        a.sort()
+        hashMap.map { a.add(it.key, it.value) }
 
         return a
     }
