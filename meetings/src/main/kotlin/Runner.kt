@@ -7,8 +7,7 @@ fun main() {
 
     println("Created: $meeting with name ${meeting.meetingName} and at ${meeting.location}")
 
-    val name = Name()
-    name.name = "Kevin Jones"
+    val name = Name("Kevin Jones")
     val participant = Participant(name, "kevin@gmail.com")
 
     val canonicalEmail: String = participant.canonicalEmail
