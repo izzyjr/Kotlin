@@ -2,14 +2,12 @@ package com.rsk
 
 fun main() {
 
-    val meeting = Meeting()
-    println("Created: $meeting")
+    val meeting = Meeting("Review")
+    println("Created: $meeting with name ${meeting.meetingName}")
 
-    val participant = Participant()
     val name = Name()
-    name.name = "Kevin"
-    participant.name = name
-    participant.email = "kevin@gmail.com"
+    name.name = "Kevin Jones"
+    val participant = Participant(name, "kevin@gmail.com")
 
     val canonicalEmail: String = participant.canonicalEmail
     println(canonicalEmail)

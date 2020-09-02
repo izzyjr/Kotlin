@@ -1,11 +1,8 @@
 package com.rsk
 
-import java.lang.IllegalArgumentException
-
-class Meeting {
+class Meeting(val meetingName: String) {
 
     private val logger = Logger()
-    val meetingName: String = ""
 
     fun addParticipants(participant: Participant) {
         if (verifyParticipants(participant)) {
