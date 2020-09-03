@@ -19,7 +19,3 @@ class Meeting(val meetingName: String, val location: Location = Location("")) {
 
     }
 }
-
-class Location(val address: String) {
-
-}
