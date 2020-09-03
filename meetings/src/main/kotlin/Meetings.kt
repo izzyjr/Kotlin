@@ -1,6 +1,6 @@
 package com.rsk
 
-class Meeting(val meetingName: String, val location: Location = Location("")) {
+open class Meeting(val meetingName: String, val location: Location = Location("")) {
 
     private val logger = Logger()
 
@@ -18,4 +18,9 @@ class Meeting(val meetingName: String, val location: Location = Location("")) {
     protected fun verifyMeeting() {
 
     }
+}
+
+class PersonalReview(meetingName: String, val employee: Participant, reviewers: List<Participant>, location: Location = Location(""))
+    : Meeting(meetingName, location) {
+
 }
