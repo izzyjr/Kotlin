@@ -1,8 +1,9 @@
 package com.rsk
 
-open class Meeting(val meetingName: String, val location: Location = Location()) {
+open class Meeting(val meetingName: String, open val location: Location = Location()) {
 
     private val logger = Logger()
+    open val locationName = ""
 
     fun addParticipants(participant: Participant) {
         if (verifyParticipants(participant)) {
@@ -20,8 +21,11 @@ open class Meeting(val meetingName: String, val location: Location = Location())
     }
 }
 
-class PersonalReview(meetingName: String, val employee: Participant, reviewers: List<Participant>, location: Location = Location())
+class PersonalReview(meetingName: String, val employee: Participant, reviewers: List<Participant>, override val location: Room)
     : Meeting(meetingName, location) {
+
+    override val locationName: String
+        get() = location.roomName
 
     fun closeReview() {
         println("review ended")

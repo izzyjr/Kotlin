@@ -11,7 +11,7 @@ fun main() {
         Room("Room 1")
     )
 
-    println("Created: $review with name ${review.meetingName} at ${review.location}")
+    println("Created: $review with name ${review.meetingName} at ${review.locationName}")
     review.closeReview()
 
     val name = Name("Kevin Jones")
