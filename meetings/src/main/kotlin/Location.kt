@@ -1,5 +1,14 @@
 package com.rsk
 
-class Location(val address: String) {
+open class Location
+
+class Room(roomName: String) : Location() {
 
 }
+
+class UkAddress(
+    val secondLine: String,
+    val city: String,
+    val county: String,
+    val postCode: String
+) : Location()
