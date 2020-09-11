@@ -1,6 +1,6 @@
 package com.rsk
 
-open class Meeting(val meetingName: String, open val location: Location = Location()) {
+open class Meeting(val meetingName: String, open val location: Location) {
 
     private val logger = Logger()
     open val locationName = ""

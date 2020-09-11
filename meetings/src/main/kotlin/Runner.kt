@@ -2,6 +2,8 @@ package com.rsk
 
 fun main() {
 
+    val postCode = USZipCode("")
+
     val meeting = Meeting("Review", UkAddress("a", "b", "c", "d"))
     val review = PersonalReview(
         "Review Meeting",
