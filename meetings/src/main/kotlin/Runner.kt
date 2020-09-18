@@ -1,16 +1,21 @@
 package com.rsk
 
+import java.nio.file.Paths
+
 fun main() {
 
     val postCode = USZipCode("")
 
-    val meeting = Meeting("Review", UkAddress("a", "b", "c", "d"))
+    val logger: Logger = FileLogger(Paths.get("/some/file.log"))
+
+    val meeting = Meeting("Review", UkAddress("a", "b", "c", UKPostCode("")), logger)
     val review = PersonalReview(
         "Review Meeting",
         Participant(Name("Alice"),
             "alice@gmail"),
         listOf(),
-        Room("Room 1")
+        Room("Room 1"),
+        logger
     )
 
     println("Created: $review with name ${review.meetingName} at ${review.locationName}")

@@ -1,11 +1,13 @@
 package com.rsk
 
-open class Meeting(val meetingName: String, open val location: Location) {
+import java.nio.file.Paths
 
-    private val logger = Logger()
+open class Meeting(val meetingName: String, open val location: Location, val logger: Logger) {
+
     open val locationName = ""
 
     fun addParticipants(participant: Participant) {
+        logger.info("Participant added")
         if (verifyParticipants(participant)) {
             println("Added: ${participant.participantName}")
         }
@@ -21,8 +23,8 @@ open class Meeting(val meetingName: String, open val location: Location) {
     }
 }
 
-class PersonalReview(meetingName: String, val employee: Participant, reviewers: List<Participant>, override val location: Room)
-    : Meeting(meetingName, location) {
+class PersonalReview(meetingName: String, val employee: Participant, reviewers: List<Participant>, override val location: Room, logger: Logger)
+    : Meeting(meetingName, location, logger) {
 
     override val locationName: String
         get() = location.roomName
